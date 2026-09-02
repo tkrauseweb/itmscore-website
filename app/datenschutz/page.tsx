@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import { PageHero, SiteFooter, SiteHeader } from "../site-components";
+export const metadata: Metadata = { title: "Datenschutz | ITMS Core" };
+export default function Privacy(){return <main><SiteHeader/><PageHero eyebrow="Rechtliches" title="Datenschutz" text="Die Datenschutzerklärung wird passend zum endgültigen öffentlichen Betrieb erstellt."/><section className="legal-page"><h2>Datenschutz vor Veröffentlichung abschließen</h2><p>Die endgültige Erklärung richtet sich danach, welche Kontaktwege, Analysefunktionen, Zahlungsdienste und Hosting-Komponenten auf der öffentlichen Website tatsächlich eingesetzt werden.</p><p>Die aktuelle private Vorschau verwendet noch keine Onlinebestellung und versendet das Kontaktformular nicht automatisch.</p></section><SiteFooter/></main>}

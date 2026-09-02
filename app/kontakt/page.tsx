@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import ContactForm from "../contact-form";
+import { PageHero, SiteFooter, SiteHeader } from "../site-components";
+export const metadata: Metadata = { title: "Kontakt | ITMS Core", description: "Pilotplatz oder persönliches Angebot für ITMS Core anfragen." };
+export default function Contact(){return <main><SiteHeader/><PageHero eyebrow="Kontakt" title="Lass uns über deine IT-Umgebung sprechen." text="Beschreibe kurz deinen Gerätebestand und deine wichtigsten Abläufe. Anschließend erhältst du eine persönliche Rückmeldung."/><section className="contact contact-page"><div><h2>Direkter Kontakt</h2><div className="contact-details"><span><strong>E-Mail</strong>admin@itmscore.de</span><span><strong>Antwortzeit</strong>In der Regel innerhalb von zwei Werktagen</span><span><strong>Erstes Gespräch</strong>Unverbindlich und ohne automatische Bestellung</span></div></div><div className="contact-box"><h3>Pilotplatz anfragen</h3><p>Die Anfrage öffnet dein eigenes E-Mail-Programm. Es wird nichts automatisch abgesendet.</p><ContactForm/></div></section><SiteFooter/></main>}
