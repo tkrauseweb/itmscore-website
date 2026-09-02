@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "./safe-link";
 import { ProductPreview, SiteFooter, SiteHeader } from "./site-components";
 
 export default function Home() {

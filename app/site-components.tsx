@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "./safe-link";
 
 export function SiteHeader() {
   return <header className="site-header"><Link className="brand" href="/" aria-label="ITMS Core Startseite"><span className="brand-mark">IC</span><span><strong>ITMS Core</strong><small>IT-Management-System</small></span></Link><nav aria-label="Hauptnavigation"><Link href="/produkt">Produkt</Link><Link href="/loesungen">Lösungen</Link><Link href="/referenz">Referenz</Link><Link href="/preise">Preise</Link><Link href="/kontakt">Kontakt</Link></nav><a className="button button-small" href="https://itmscore.de/login">Zur Anwendung</a></header>;

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "../safe-link";
 import { PageHero, SiteFooter, SiteHeader } from "../site-components";
 export const metadata: Metadata = { title: "Lösungen | ITMS Core", description: "ITMS Core für kleine Unternehmen, IT-Dienstleister, Werkstätten und Vereine." };
 const solutions=[["Kleine Unternehmen","Geräte, Benutzer und Wartungen zentral festhalten, auch ohne eigene große IT-Abteilung.",["Übersicht über Arbeitsplätze und Server","Wartungstermine früh erkennen","Klare Aufgabenverteilung"]],["IT-Dienstleister","Kundenumgebungen strukturiert dokumentieren und wiederkehrende Arbeiten nachvollziehbar organisieren.",["Getrennte Kundenbestände","Technische Dokumentation","Planbare Wartungsabläufe"]],["Werkstätten & Vereine","Gemeinsam genutzte Technik, Standorte und Verantwortlichkeiten unkompliziert verwalten.",["Einfache Bestandsaufnahme","Standorte und Zustände","Aufgaben für Mitglieder oder Teams"]]];
