@@ -13,7 +13,7 @@ export default function ContactForm() {
       `Name: ${data.get("name")}\nE-Mail: ${data.get("email")}\nUnternehmen: ${data.get("company") || "–"}\nGeräteumfang: ${data.get("assets")}\n\nUmgebung / Wunsch:\n${data.get("message")}`,
     );
     setPrepared(true);
-    window.location.href = `mailto:admin@itmscore.de?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:kontakt@itmscore.de?subject=${subject}&body=${body}`;
   }
 
   return <form className="contact-form" onSubmit={submit}>
