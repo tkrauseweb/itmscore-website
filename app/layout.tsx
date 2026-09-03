@@ -7,11 +7,11 @@ const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://itmscore.de"),
-  title: "ITMS Core – IT-Inventar für kleine Teams",
-  description: "IT-Geräte, Wartungen und Aufgaben übersichtlich verwalten – sicher gehostet und persönlich eingerichtet.",
+  title: "ITMS Core – IT-Management als Referenzprojekt",
+  description: "Eigenentwickeltes webbasiertes IT-Management-System für Inventar, Standorte, Wartungen, Aufgaben und Berichte.",
   openGraph: {
-    title: "ITMS Core – IT-Inventar für kleine Teams",
-    description: "IT-Geräte, Wartungen und Aufgaben übersichtlich verwalten.",
+    title: "ITMS Core – IT-Management als Referenzprojekt",
+    description: "Vom Konzept bis zum abgesicherten produktiven Betrieb: ITMS Core dokumentiert IT-Infrastruktur übersichtlich.",
     images: ["/og.png"],
     locale: "de_DE",
     type: "website",
