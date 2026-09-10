@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import "./sections.css";
+import "./portfolio.css";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://itmscore.de"),
-  title: "ITMS Core – IT-Management als Referenzprojekt",
-  description: "Eigenentwickeltes webbasiertes IT-Management-System für Inventar, Standorte, Wartungen, Aufgaben und Berichte.",
+  title: "ITMS Core – Praxisprojekt von Tim Krause",
+  description: "Webbasiertes IT-Management-System für Inventar, Wartungen und Aufgaben – als persönliches Praxis- und Bewerbungsprojekt.",
   openGraph: {
-    title: "ITMS Core – IT-Management als Referenzprojekt",
-    description: "Vom Konzept bis zum abgesicherten produktiven Betrieb: ITMS Core dokumentiert IT-Infrastruktur übersichtlich.",
+    title: "ITMS Core – Praxisprojekt von Tim Krause",
+    description: "Von der Idee bis zum abgesicherten Betrieb: Entwicklung, Systemadministration und Dokumentation in einem Projekt.",
     images: ["/og.png"],
     locale: "de_DE",
     type: "website",
