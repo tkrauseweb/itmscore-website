@@ -26,7 +26,6 @@ export default function PortfolioPage() {
           </p>
           <div className="hero-actions">
             <Link className="button" href="/referenz">ITMScore ansehen</Link>
-            <Link className="text-link" href="/demo">Öffentliche Demo <span>→</span></Link>
           </div>
         </div>
         <div className="portfolio-facts" aria-label="Schwerpunkte">
@@ -52,7 +51,6 @@ export default function PortfolioPage() {
             ))}
           </div>
           <div className="hero-actions">
-            <Link className="button" href="/demo">Demo öffnen</Link>
             <Link className="text-link" href="/referenz">Projektweg lesen <span>→</span></Link>
           </div>
         </div>

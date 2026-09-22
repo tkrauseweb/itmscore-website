@@ -1,7 +1,6 @@
 import Link from "./safe-link";
 
 const navigation = [
-  { href: "/demo", label: "Demo" },
   { href: "/produkt", label: "Funktionen" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/referenz", label: "Projektweg" },
