@@ -8,12 +8,12 @@ const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://itmscore.de"),
-  title: "ITMS Core – Praxisprojekt von Tim Krause",
+  title: "ITMScore – Praxisprojekt von Tim Krause",
   description: "Webbasiertes IT-Management-System für Inventar, Wartungen und Aufgaben – als persönliches Praxis- und Bewerbungsprojekt.",
   openGraph: {
-    title: "ITMS Core – Praxisprojekt von Tim Krause",
+    title: "ITMScore – Praxisprojekt von Tim Krause",
     description: "Von der Idee bis zum abgesicherten Betrieb: Entwicklung, Systemadministration und Dokumentation in einem Projekt.",
-    images: ["/og.png"],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "ITMScore Praxisprojekt von Tim Krause" }],
     locale: "de_DE",
     type: "website",
   },

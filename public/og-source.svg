@@ -1,0 +1,23 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F8F7FA"/>
+  <rect x="58" y="58" width="1084" height="514" rx="28" fill="white" stroke="#E7E3E9" stroke-width="2"/>
+  <rect x="96" y="96" width="64" height="64" rx="16" fill="#7138C8"/>
+  <text x="128" y="137" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">IS</text>
+  <text x="96" y="262" fill="#18151D" font-family="Arial, sans-serif" font-size="78" font-weight="700" letter-spacing="-3">ITMScore</text>
+  <text x="96" y="326" fill="#18151D" font-family="Arial, sans-serif" font-size="32" font-weight="700">IT-Management als Praxisprojekt</text>
+  <text x="96" y="378" fill="#686270" font-family="Arial, sans-serif" font-size="24">Systemintegration · Homelab · Webentwicklung</text>
+  <text x="96" y="502" fill="#7138C8" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1">PORTFOLIO VON TIM KRAUSE</text>
+  <rect x="772" y="126" width="300" height="88" rx="14" fill="#17131C"/>
+  <text x="804" y="160" fill="#C9A9FB" font-family="Arial, sans-serif" font-size="14" font-weight="700">FRONTEND</text>
+  <text x="804" y="190" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">React</text>
+  <path d="M922 214V250" stroke="#7138C8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M912 242L922 252L932 242" stroke="#7138C8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="772" y="252" width="300" height="88" rx="14" fill="#F3EDFB" stroke="#DED5EA" stroke-width="2"/>
+  <text x="804" y="286" fill="#7138C8" font-family="Arial, sans-serif" font-size="14" font-weight="700">API</text>
+  <text x="804" y="316" fill="#18151D" font-family="Arial, sans-serif" font-size="22" font-weight="700">Node.js</text>
+  <path d="M922 340V376" stroke="#7138C8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M912 368L922 378L932 368" stroke="#7138C8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="772" y="378" width="300" height="88" rx="14" fill="white" stroke="#DCD7E0" stroke-width="2"/>
+  <text x="804" y="412" fill="#7138C8" font-family="Arial, sans-serif" font-size="14" font-weight="700">DATENBANK</text>
+  <text x="804" y="442" fill="#18151D" font-family="Arial, sans-serif" font-size="22" font-weight="700">PostgreSQL</text>
+</svg>

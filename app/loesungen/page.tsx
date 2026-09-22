@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "../safe-link";
 import { PageHero, SiteFooter, SiteHeader } from "../site-components";
 
-export const metadata: Metadata = { title: "Lernfelder | ITMS Core", description: "Erfahrungen aus Entwicklung, Systemadministration und Dokumentation." };
+export const metadata: Metadata = { title: "Lernfelder | ITMScore", description: "Erfahrungen aus Entwicklung, Systemadministration und Dokumentation." };
 const areas = [["Webentwicklung", "Eine Oberfläche und eine API als zusammenhängende Anwendung planen und umsetzen.", ["React-Frontend", "Node.js-Backend", "PostgreSQL-Datenmodell"]], ["Linux & Betrieb", "Die Anwendung auf einem eigenen Ubuntu-VPS bereitstellen und zuverlässig betreiben.", ["Docker Compose", "HTTPS und Firewall", "Updates und Backups"]], ["IT-Dokumentation", "Geräte, Wartungen und technische Entscheidungen nachvollziehbar festhalten.", ["Strukturierte Inventardaten", "Aufgaben und Prüfschritte", "Versionen und Änderungen"]]];
 
 export default function LearningAreas() {
