@@ -15,7 +15,6 @@ export function SiteHeader() {
         <span className="brand-mark">IS</span>
         <span>
           <strong>ITMScore</strong>
-          <small>Praxisprojekt</small>
         </span>
       </Link>
 
