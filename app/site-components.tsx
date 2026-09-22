@@ -46,7 +46,6 @@ export function SiteFooter() {
         <span className="brand-mark">IS</span>
         <span>
           <strong>ITMScore</strong>
-          <small>Praxisprojekt von Tim Krause</small>
         </span>
       </Link>
       <p>IT-Management als persönliches Referenzprojekt.</p>
