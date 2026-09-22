@@ -8,6 +8,15 @@
   gap: 10px;
 }
 
+.site-header nav a[aria-current="page"] {
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.site-header .desktop-nav a[aria-current="page"] {
+  box-shadow: inset 0 -2px var(--purple);
+}
+
 .mobile-nav {
   position: relative;
   display: none;
@@ -48,6 +57,10 @@
 }
 
 .mobile-nav nav a:hover {
+  background: var(--soft);
+}
+
+.mobile-nav nav a[aria-current="page"] {
   background: var(--soft);
 }
 

@@ -1,11 +1,5 @@
 import Link from "./safe-link";
-
-const navigation = [
-  { href: "/produkt", label: "Produkt" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/referenz", label: "Projektweg" },
-  { href: "/kontakt", label: "Kontakt" },
-];
+import SiteNavigation from "./site-navigation";
 
 export function SiteHeader() {
   return (
@@ -17,21 +11,13 @@ export function SiteHeader() {
         </span>
       </Link>
 
-      <nav className="desktop-nav" aria-label="Hauptnavigation">
-        {navigation.map((item) => (
-          <Link href={item.href} key={item.href}>{item.label}</Link>
-        ))}
-      </nav>
+      <SiteNavigation className="desktop-nav" label="Hauptnavigation" />
 
       <div className="header-actions">
         <Link className="button button-small" href="/demo">Demo öffnen</Link>
         <details className="mobile-nav">
           <summary aria-label="Navigation öffnen">Menü</summary>
-          <nav aria-label="Mobile Navigation">
-            {navigation.map((item) => (
-              <Link href={item.href} key={item.href}>{item.label}</Link>
-            ))}
-          </nav>
+          <SiteNavigation label="Mobile Navigation" />
         </details>
       </div>
     </header>

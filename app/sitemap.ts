@@ -6,7 +6,6 @@ const routes = [
   { path: "/demo", priority: .8 },
   { path: "/referenz", priority: .8 },
   { path: "/produkt", priority: .7 },
-  { path: "/loesungen", priority: .6 },
   { path: "/kontakt", priority: .5 },
   { path: "/impressum", priority: .2 },
   { path: "/datenschutz", priority: .2 },
