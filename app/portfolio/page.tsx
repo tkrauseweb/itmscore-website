@@ -38,7 +38,7 @@ export default function PortfolioPage() {
 
       <section className="portfolio-hero">
         <div>
-          <p className="eyebrow">Technisches Portfolio</p>
+          <p className="eyebrow">Über mich</p>
           <h1>Tim Krause</h1>
           <p className="portfolio-role">Fachinformatiker für Systemintegration in Ausbildung</p>
           <p className="portfolio-lead">
