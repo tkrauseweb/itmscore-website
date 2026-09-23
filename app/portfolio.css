@@ -421,6 +421,55 @@
   font-weight: 900;
 }
 
+.portfolio-section.evidence-section {
+  border-top: 1px solid var(--line);
+  background: var(--soft);
+  max-width: none;
+  padding-left: max(24px, calc((100vw - 1132px) / 2));
+  padding-right: max(24px, calc((100vw - 1132px) / 2));
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin-top: 58px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.evidence-grid article {
+  min-height: 255px;
+  padding: 28px;
+  background: var(--paper);
+}
+
+.evidence-number,
+.evidence-label {
+  color: var(--purple);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.evidence-label {
+  margin: 34px 0 0;
+}
+
+.evidence-grid h3 {
+  margin: 10px 0 13px;
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.evidence-grid article > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
 .portfolio-section {
   max-width: 1180px;
   margin: 0 auto;
@@ -521,6 +570,10 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .evidence-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .learning-tags {
     justify-content: flex-start;
   }
@@ -531,6 +584,10 @@
   .portfolio-featured,
   .portfolio-section,
   .learning-section {
+    padding: 72px 18px;
+  }
+
+  .portfolio-section.evidence-section {
     padding: 72px 18px;
   }
 
@@ -559,6 +616,14 @@
 
   .practice-grid {
     grid-template-columns: 1fr;
+  }
+
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evidence-grid article {
+    min-height: 0;
   }
 
   .practice-grid article {

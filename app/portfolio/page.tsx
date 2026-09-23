@@ -8,6 +8,29 @@ export const metadata: Metadata = {
   description: "Technisches Portfolio von Tim Krause mit ITMScore, Homelab, Linux, Netzwerken und Systemintegration.",
 };
 
+const projectEvidence = [
+  {
+    label: "Bereitstellung",
+    title: "Anwendung selbst betrieben",
+    text: "Ubuntu-VPS und Docker-Dienste eingerichtet sowie den Zugriff über Reverse Proxy und HTTPS angebunden.",
+  },
+  {
+    label: "Absicherung",
+    title: "Zugänge bewusst begrenzt",
+    text: "SSH-Zugang, Firewall und Fail2ban eingesetzt, um Dienste kontrolliert erreichbar zu machen.",
+  },
+  {
+    label: "Datensicherung",
+    title: "Wiederherstellung mitgedacht",
+    text: "Automatisierte Backups eingerichtet und die notwendigen Schritte zur Wiederherstellung vorbereitet.",
+  },
+  {
+    label: "Qualität",
+    title: "Änderungen nachvollziehbar gemacht",
+    text: "Abläufe getestet, Fehler dokumentiert und Funktionen schrittweise in neuen Versionen verbessert.",
+  },
+];
+
 export default function PortfolioPage() {
   return (
     <main>
@@ -62,6 +85,24 @@ export default function PortfolioPage() {
             <li>Sicherheits- und Datenschutzgrenzen beachten</li>
             <li>Entscheidungen und Lernfortschritt dokumentieren</li>
           </ul>
+        </div>
+      </section>
+
+      <section className="portfolio-section evidence-section">
+        <div className="section-heading">
+          <p className="eyebrow">Konkrete Umsetzung</p>
+          <h2>Was ich im Projekt selbst aufgebaut habe.</h2>
+          <p>Die Beispiele verbinden Entwicklung, Systembetrieb und Dokumentation zu nachvollziehbaren Arbeitsergebnissen.</p>
+        </div>
+        <div className="evidence-grid">
+          {projectEvidence.map((item, index) => (
+            <article key={item.label}>
+              <span className="evidence-number">0{index + 1}</span>
+              <p className="evidence-label">{item.label}</p>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
