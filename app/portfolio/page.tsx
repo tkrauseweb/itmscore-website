@@ -109,8 +109,11 @@ export default function PortfolioPage() {
       <section className="portfolio-section">
         <div className="section-heading">
           <p className="eyebrow">Praktische Kenntnisse</p>
-          <h2>Erfahrung statt Prozentbalken.</h2>
-          <p>Die Bereiche beschreiben, womit ich praktisch arbeite und welche Aufgaben ich dabei kennenlerne.</p>
+          <h2>Technisches Wissen praktisch angewendet.</h2>
+          <p>
+            Ein Überblick über die Technologien und Aufgaben, mit denen ich in Ausbildung, Homelab und eigenen
+            Projekten arbeite.
+          </p>
         </div>
         <div className="practice-grid">
           {practiceAreas.map((area) => (
@@ -149,7 +152,7 @@ export default function PortfolioPage() {
       <section className="learning-section">
         <div>
           <p className="eyebrow">Aktuell lerne ich</p>
-          <h2>Die nächsten Themen entstehen aus der Praxis.</h2>
+          <h2>Diese Themen vertiefe ich derzeit.</h2>
         </div>
         <div className="learning-tags">
           {currentLearning.map((topic) => <span key={topic}>{topic}</span>)}
