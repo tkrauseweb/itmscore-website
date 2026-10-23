@@ -18,6 +18,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/tkrauseweb/itmscore-website/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/tkrauseweb/itmscore-website/actions/workflows/ci.yml/badge.svg"></a>
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white">
   <img alt="React" src="https://img.shields.io/badge/React-19-20232A?logo=react&logoColor=61DAFB">
   <img alt="Node.js" src="https://img.shields.io/badge/Node.js-%3E%3D22.13-339933?logo=nodedotjs&logoColor=white">
