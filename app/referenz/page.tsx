@@ -76,6 +76,7 @@ export default function Reference() {
         <p className="eyebrow">Aktueller Stand</p>
         <h2>Ein echtes Lernprojekt – transparent dargestellt.</h2>
         <p>ITMScore wird weiterentwickelt. Die öffentliche Demo verwendet ausschließlich Beispieldaten; die produktive Installation und meine private Infrastruktur bleiben geschützt.</p>
+        <p>Den Quellcode der <strong>öffentlichen Projektseite</strong> kannst du auf <a href="https://github.com/tkrauseweb/itmscore-website" target="_blank" rel="noopener noreferrer" style={{ color: "var(--purple)", fontWeight: 700, textDecoration: "underline" }}>GitHub ansehen</a>. Die geschützte Anwendung und ihre Konfiguration sind nicht enthalten.</p>
       </section>
       <SiteFooter />
     </main>
