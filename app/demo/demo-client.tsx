@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+type TaskStatus = "Offen" | "Geplant" | "In Arbeit" | "Erledigt";
+
 const views = {
   overview: {
     label: "Übersicht",
@@ -17,7 +19,7 @@ const views = {
   devices: {
     label: "Geräte",
     title: "Inventar mit klaren Zuständen.",
-    intro: "Beispielgeräte lassen sich einem Typ, Standort und Status zuordnen.",
+    intro: "Eine Auswahl aus dem fiktiven Gerätebestand. Suche nach Geräten, Typen oder Standorten.",
     columns: ["Gerät", "Typ", "Standort", "Status"],
     rows: [
       ["Demo-Server", "Server", "Technikraum", "Aktiv"],
@@ -34,6 +36,7 @@ const views = {
       ["Backup prüfen", "Hoch", "Heute", "Offen"],
       ["Router aktualisieren", "Mittel", "Mittwoch", "Geplant"],
       ["Inventar ergänzen", "Niedrig", "Freitag", "In Arbeit"],
+      ["Zugänge prüfen", "Mittel", "Donnerstag", "Offen"],
     ],
   },
   operation: {
@@ -50,10 +53,21 @@ const views = {
 } as const;
 
 type ViewKey = keyof typeof views;
+const initialTasks = views.tasks.rows.map(([title, priority, due, status]) => ({ title, priority, due, status: status as TaskStatus }));
+const taskStatuses: TaskStatus[] = ["Offen", "Geplant", "In Arbeit", "Erledigt"];
 
 export default function DemoClient() {
   const [active, setActive] = useState<ViewKey>("overview");
+  const [query, setQuery] = useState("");
+  const [tasks, setTasks] = useState(initialTasks);
   const view = views[active];
+  const openTasks = tasks.filter((task) => task.status !== "Erledigt").length;
+
+  function resetDemo() {
+    setActive("overview");
+    setQuery("");
+    setTasks(initialTasks.map((task) => ({ ...task })));
+  }
 
   return (
     <div className="demo-shell">
@@ -72,15 +86,33 @@ export default function DemoClient() {
         ))}
       </aside>
       <div className="demo-workspace">
-        <div className="demo-toolbar"><span>ITMScore · Öffentliche Vorschau</span><b>Nur Beispieldaten</b></div>
+        <div className="demo-toolbar">
+          <span>ITMScore · Öffentliche Vorschau</span>
+          <div className="demo-toolbar-actions">
+            <b>Nur Beispieldaten</b>
+            <button type="button" onClick={resetDemo}>Zurücksetzen</button>
+          </div>
+        </div>
         <div className="demo-content">
           <p className="eyebrow">{view.label}</p>
           <h2>{view.title}</h2>
           <p className="demo-intro">{view.intro}</p>
+          {active === "devices" && (
+            <label className="demo-search">
+              Geräte suchen
+              <input
+                type="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="Name, Typ oder Standort"
+              />
+            </label>
+          )}
+          {active === "tasks" && <p className="demo-help">Du kannst den Status jeder Aufgabe ändern. Die Änderungen sind nur in dieser Demo-Sitzung sichtbar.</p>}
           {"cards" in view ? (
             <div className="demo-metrics">
               {view.cards.map(([label, value, detail]) => (
-                <article key={label}><span>{label}</span><strong>{value}</strong><small>{detail}</small></article>
+                <article key={label}><span>{label}</span><strong>{label === "Aufgaben" ? openTasks : value}</strong><small>{label === "Aufgaben" && openTasks === 0 ? "alle erledigt" : detail}</small></article>
               ))}
             </div>
           ) : (
@@ -88,10 +120,28 @@ export default function DemoClient() {
               <div className="demo-row demo-row-header" role="row">
                 {view.columns.map((column) => <span role="columnheader" key={column}>{column}</span>)}
               </div>
-              {view.rows.map((row) => (
+              {active === "tasks" ? tasks.map((task) => (
+                <div className="demo-row" role="row" key={task.title}>
+                  <span role="cell" className="primary">{task.title}</span>
+                  <span role="cell">{task.priority}</span>
+                  <span role="cell">{task.due}</span>
+                  <span role="cell">
+                    <select
+                      aria-label={`Status für ${task.title}`}
+                      value={task.status}
+                      onChange={(event) => {
+                        const next = event.target.value as TaskStatus;
+                        setTasks((current) => current.map((item) => item.title === task.title ? { ...item, status: next } : item));
+                      }}
+                    >
+                      {taskStatuses.map((status) => <option key={status} value={status}>{status}</option>)}
+                    </select>
+                  </span>
+                </div>
+              )) : view.rows.filter((row) => active !== "devices" || row.join(" ").toLocaleLowerCase("de").includes(query.trim().toLocaleLowerCase("de"))).map((row) => (
                 <div className="demo-row" role="row" key={row[0]}>
                   {row.map((cell, index) => (
-                    <span role="cell" key={cell} className={index === 0 ? "primary" : ""}>{cell}</span>
+                    <span role="cell" key={index} className={index === 0 ? "primary" : ""}>{cell}</span>
                   ))}
                 </div>
               ))}
