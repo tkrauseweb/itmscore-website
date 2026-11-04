@@ -38,11 +38,11 @@ Dieses Repository enthält bewusst **nur die öffentliche Projekt- und Portfolio
 | --- | --- |
 | [![Startseite von ITMScore](public/readme-home.png)](https://itmscore.de/) | [![Öffentliche ITMScore-Demo](public/readme-demo.png)](https://itmscore.de/demo) |
 
-Die Demo arbeitet ausschließlich mit frei erfundenen Beispieldaten, benötigt keine Anmeldung und stellt keine Verbindung zur produktiven Installation her.
+Die Demo arbeitet ausschließlich mit frei erfundenen Beispieldaten, benötigt keine Anmeldung und stellt keine Verbindung zur produktiven Installation her. Änderungen an Aufgaben bleiben nur im Arbeitsspeicher des Browsers und werden nach einem Neuladen verworfen.
 
 ## Inhalte der Website
 
-- **Öffentliche Demo:** interaktive Ansichten für Übersicht, Geräte, Aufgaben und Betrieb
+- **Öffentliche Demo:** interaktive Ansichten für Übersicht, Geräte, Aufgaben und Betrieb, inklusive Gerätesuche und veränderbaren Aufgabenstatus (nur im Browser, ohne dauerhafte Speicherung)
 - **Produktvorstellung:** Geräteinventar, Wartungsplanung, Aufgaben, Updates und Berichte
 - **Projektweg:** Anforderungen, Umsetzung, Tests, Betrieb und Dokumentation
 - **Architektur:** verständliche Darstellung von Anwendung, Datenbank, HTTPS und Backups
@@ -67,9 +67,13 @@ flowchart LR
 - Next.js-kompatible App-Struktur mit Vinext und Vite 8
 - serverseitige Metadaten, Sitemap und `robots.txt`
 - responsive Oberfläche mit eigenem CSS
-- Bereitstellung über OpenAI Sites und Cloudflare-Werkzeuge
+- Hosting der Domain laut Betreiber auf einem STRATO-VPS; dieses Repository enthält zusätzlich eine Hosting-Konfiguration unter `.openai/hosting.json` (die konkrete produktive Deployment-Pipeline ist hier nicht dokumentiert)
 
 Die auf der Website beschriebene geschützte Anwendung verwendet React, Node.js, PostgreSQL, Docker und Linux. Ihr Quellcode liegt nicht in diesem Repository.
+
+## Deployment auf STRATO
+
+Änderungen in diesem GitHub-Repository werden **nicht automatisch auf dem STRATO-VPS aktiv**, sofern keine eigene Deployment-Automatisierung eingerichtet ist. Vor einer Live-Schaltung den Branch prüfen, den Build testen und erst danach gemäß der tatsächlichen Serverkonfiguration bereitstellen. Zugangsdaten und `.env`-Dateien niemals ins öffentliche Repository aufnehmen.
 
 ## Lokal ausführen
 
