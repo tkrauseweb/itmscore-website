@@ -634,3 +634,13 @@
     min-height: 0;
   }
 }
+
+/* Public demo interactions: changes stay in browser memory. */
+.demo-toolbar-actions{display:flex;align-items:center;gap:10px}
+.demo-toolbar-actions button{padding:7px 10px;border:1px solid #dcd7e0;border-radius:7px;background:#fff;color:var(--ink);font:inherit;font-size:11px;font-weight:700;cursor:pointer}
+.demo-toolbar-actions button:hover{border-color:var(--purple);color:var(--purple)}
+.demo-search{display:grid;gap:8px;max-width:360px;margin:-12px 0 24px;color:var(--ink);font-size:12px;font-weight:700}
+.demo-search input{width:100%;min-height:42px;padding:10px 12px;border:1px solid #dcd7e0;border-radius:8px;background:#fff;color:var(--ink);font:inherit;font-weight:400}
+.demo-help{margin:-12px 0 24px;color:var(--muted);font-size:12px;line-height:1.6}
+.demo-row select{width:100%;min-width:100px;padding:8px 6px;border:1px solid #dcd7e0;border-radius:7px;background:white;color:var(--ink);font:inherit;font-size:12px}
+@media(max-width:650px){.demo-toolbar{height:auto;min-height:60px;padding:12px 14px;gap:10px;flex-wrap:wrap}.demo-toolbar-actions{width:100%;justify-content:space-between}.demo-row select{min-width:0}.demo-row{row-gap:4px}}
